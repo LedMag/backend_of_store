@@ -1,0 +1,22 @@
+{
+  "name": "backend_of_store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LedMag/backend_of_store.git"
+  },
+  "author": "Magomed Aminov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LedMag/backend_of_store/issues"
+  },
+  "homepage": "https://github.com/LedMag/backend_of_store#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
