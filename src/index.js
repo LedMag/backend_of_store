@@ -107,8 +107,17 @@ const router = (client) => {
 }
 
 
-http.createServer({}, (req, res) => {
+const server = http.createServer({}, (req, res) => {
   router({ req, res });
 }).listen(PORT, HOST, () => {
   console.log(`Server listens http://${HOST}:${PORT}`)
 })
+
+process.on('SIGINT', () => {
+  console.info('SIGINT signal received.');
+  console.log('Closing http server.');
+  server.close(() => {
+    console.log('Http server closed.');
+    process.exit(0);
+  });
+});
